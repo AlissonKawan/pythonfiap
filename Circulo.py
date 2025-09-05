@@ -1,0 +1,5 @@
+Diametro = float(input('Digite o valor do diametro: '))
+Raio = (Diametro / 2)
+print (f'Sabendo disso, o valor do raio é: {Raio:.2f}')
+Perimetro = (3.14 * Raio * 2)
+print (f'E o valor do perímetro desse círculo é: {Perimetro:.2f}')
