@@ -1,11 +1,16 @@
-n = 1
+qtd = int(input('Digite quantos numeros serão digitados: '))
 soma = 0
 media = 0
 pos = 0
 neg = 0
-while n <= 5 :
-    num = int(input("Digite um valor: "))
+n = 1
 
+while (qtd<= 0 or qtd >20):
+   print('Somente valores maiores que 0 e menores ou iguais a 20!')
+   qtd = int(input('Digite quantos numeros serão digitados: '))
+
+while n <= qtd :
+    num = int(input("Digite um valor: "))
     if (n == 1):
         maior = num
         menor = num
@@ -13,17 +18,18 @@ while n <= 5 :
        maior = num
     if(num < menor):
        menor = num
+
     n += 1
+
     soma += num
-    media = soma / n
+    media = soma / num
     if (num >= 0):
      pos += 1
     else:
      neg += 1
     
-
-per_neg = (neg * 100) / 5
-per_pos = (pos * 100) / 5
+per_neg = (neg * 100) / num
+per_pos = (pos * 100) / num
 print(f"O maior numero é?: {maior}")
 print(f"O menor numero é?: {menor}")
 print(f'A soma de todos eles é: {soma}')
